@@ -31,8 +31,8 @@ export default class App extends Component{
   return (
    <div>
      <Header />
-    <Dashboard inventory={this.state.inventory} />
-     <Form />
+    <Dashboard inventory={this.state.inventory} componentDidMount={this.componentdidMount}/>
+     <Form componentDidMount={this.componentdidMount} />
    </div>
   );
   }

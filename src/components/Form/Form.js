@@ -7,7 +7,7 @@ export default class Form extends Component {
         super()
 
         this.state = {
-            image: '',
+            img: '',
             name: '',
             price: 0
         }
@@ -15,7 +15,7 @@ export default class Form extends Component {
 
     handleEdit = (val) => {
         this.setState({
-            image: val
+            img: val
         })
     }
     handleEdit1 = (val) => {
@@ -29,19 +29,27 @@ export default class Form extends Component {
         })
     }
 
+    handleEdit3 = () => {
+        this.setState({
+            img:'',
+            name:'',
+            price:0
+        })
+    }
+
     addProduct = (event) => {
         event.preventDefault();
     
-        const {image,name,price} = this.state;
+        const {img,name,price} = this.state;
     
         const body = {
-          image,
+          img,
           name,
           price
         }
         axios.post('http://localhost:8080/api/product', body).then(response => {
           this.setState({inventory:response.data,
-          image:'',
+          img:'',
         name:'',
       price:''})
         })
@@ -61,8 +69,8 @@ export default class Form extends Component {
                 <label>Price:</label>
                 <input type="number" onChange={(e) => this.handleEdit2(e.target.value)} value={this.state.price}  />
 
-                <button>Cancel</button>
-                <button id='cursor'>Add to Inventory</button>
+                <button id='cursor' onClick={() => this.handleEdit3()}>Cancel</button>
+                <button id='cursor' onClick={this.addProduct}>Add to Inventory</button>
             </div>
         )
     }

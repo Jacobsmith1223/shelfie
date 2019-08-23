@@ -15,7 +15,16 @@ const createProduct = (req,res) => {
     
 }
 
+const deleteProduct = (req,res) => {
+    const {id} = req.params
+    const db = req.app.get('db');
+    db.delete_product([id]).then(() => {
+        res.status(200).send("product is gone")
+    })
+}
+
 module.exports = {
     getInventory,
-    createProduct
+    createProduct,
+    deleteProduct
 }

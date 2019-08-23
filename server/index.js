@@ -23,5 +23,7 @@ app.get('/api/inventory',productCTRL.getInventory)
 
 app.post('/api/product', productCTRL.createProduct)
 
+app.delete('/api/product/:id', productCTRL.deleteProduct)
+
 
 app.listen(8080, () => console.log('ready to serve, your majesty'))
