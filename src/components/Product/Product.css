@@ -1,0 +1,16 @@
+.image-sizer{
+    height:15vh;
+    width:14vw;
+    margin-left:13px;
+}
+
+.red-box{
+    background:#d34735;
+    width:25vw;
+    height:18vh;
+    border-radius: 5%;
+    display:flex;
+    align-items: center;
+    margin-bottom:9px;
+
+}
