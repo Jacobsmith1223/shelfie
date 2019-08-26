@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import '../Form/Form.css'
 
 
 export default class Form extends Component {
@@ -59,15 +60,18 @@ export default class Form extends Component {
 
     render(){
         return (
-            <div>
+            <div className="green-box">
+
+                
                 <label>Image URL:</label>
-                <input placeholder="image here" type ="text" onChange={(e) => this.handleEdit(e.target.value)} value={this.state.image}   />
+                <input className='input1' placeholder="image here" type ="text" onChange={(e) => this.handleEdit(e.target.value)} value={this.state.image}   />
+            
 
                 <label>Product Name:</label>
-                <input placeholder="Input name" type="text" onChange={(e) => this.handleEdit1(e.target.value)} value={this.state.name}   />
+                <input className='input1' placeholder="Input name" type="text" onChange={(e) => this.handleEdit1(e.target.value)} value={this.state.name}   />
 
                 <label>Price:</label>
-                <input type="number" onChange={(e) => this.handleEdit2(e.target.value)} value={this.state.price}  />
+                <input className='input1' type="number" onChange={(e) => this.handleEdit2(e.target.value)} value={this.state.price}  />
 
                 <button id='cursor' onClick={() => this.handleEdit3()}>Cancel</button>
                 <button id='cursor' onClick={this.addProduct}>Add to Inventory</button>

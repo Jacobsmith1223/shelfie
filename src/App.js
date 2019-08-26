@@ -4,6 +4,7 @@ import axios from 'axios'
 import Dashboard from './components/Dashboard/Dashboard';
 import Header from './components/Header/Header'
 import Form from './components/Form/Form'
+import './App.css'
 
 
 
@@ -31,8 +32,10 @@ export default class App extends Component{
   return (
    <div>
      <Header />
+     <div className='flexin'>
     <Dashboard inventory={this.state.inventory} componentDidMount={this.componentdidMount}/>
      <Form componentDidMount={this.componentdidMount} />
+     </div>
    </div>
   );
   }

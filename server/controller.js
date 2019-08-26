@@ -15,6 +15,18 @@ const createProduct = (req,res) => {
     
 }
 
+let updateProduct = (req,res) => {
+    const {id} = req.params;
+    const name = req.body;
+    const price = req.body;
+    const img = req.body;
+    const db = req.app.get('db');
+    db.update_product([name,price,img]).then(() => {
+    res.status(200).send('product has been updated your majesty')
+    })
+    
+}
+
 const deleteProduct = (req,res) => {
     const {id} = req.params
     const db = req.app.get('db');
@@ -26,5 +38,6 @@ const deleteProduct = (req,res) => {
 module.exports = {
     getInventory,
     createProduct,
+    updateProduct,
     deleteProduct
 }

@@ -6,9 +6,9 @@
 
 .red-box{
     background:#d34735;
-    width:25vw;
+    width:30vw;
     height:18vh;
-    border-radius: 5%;
+    border-radius: 2%;
     display:flex;
     align-items: center;
     margin-bottom:9px;

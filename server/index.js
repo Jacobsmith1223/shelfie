@@ -23,6 +23,8 @@ app.get('/api/inventory',productCTRL.getInventory)
 
 app.post('/api/product', productCTRL.createProduct)
 
+app.put('/api/product/:id',productCTRL.updateProduct)
+
 app.delete('/api/product/:id', productCTRL.deleteProduct)
 
 
