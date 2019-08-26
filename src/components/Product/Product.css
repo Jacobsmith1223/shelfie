@@ -14,3 +14,26 @@
     margin-bottom:9px;
 
 }
+
+.words{
+    display:flex;
+    flex-direction: column;
+}
+
+.butts{
+    width:12vw;
+display:flex;
+justify-content: space-between;
+;
+
+}
+
+.del {
+background:#3ad886;
+border-radius:10%
+}
+
+.ed{
+    background:#3ad886;
+    border-radius:10%
+}

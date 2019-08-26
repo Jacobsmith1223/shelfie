@@ -11,3 +11,22 @@
     width:20vw;
     margin: 0 auto;
 }
+
+.butt{
+    display:flex;
+    justify-content: space-around;
+}
+
+.add{
+    background:#ed6b5a;
+    width: 8vw;
+    height:6vh;
+    border-radius: 10%;
+}
+
+.can{
+    background:#ed6b5a;
+    width: 5vw;
+    height:6vh;
+    border-radius: 10%;
+}

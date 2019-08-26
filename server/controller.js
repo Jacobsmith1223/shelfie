@@ -21,7 +21,7 @@ let updateProduct = (req,res) => {
     const price = req.body;
     const img = req.body;
     const db = req.app.get('db');
-    db.update_product([name,price,img]).then(() => {
+    db.update_product([id,name,price,img]).then(() => {
     res.status(200).send('product has been updated your majesty')
     })
     

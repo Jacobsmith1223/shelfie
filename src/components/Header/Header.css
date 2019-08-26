@@ -1,0 +1,24 @@
+.header{
+    height: 15vh;
+    width:100%;
+    background:#ab2a19;
+    margin-bottom:30px;
+}
+
+.flexer{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left:55px;
+
+}
+
+.title{
+    color:white;
+    font-size:25px
+}
+
+.picky{
+    height:8vh;
+
+}

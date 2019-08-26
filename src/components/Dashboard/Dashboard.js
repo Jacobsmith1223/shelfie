@@ -11,13 +11,18 @@ export default class Dashboard extends Component {
           })
        
          }
+         updateProd = (data) => {
+             console.log('clickyclicky')
+            this.setState({
+              inventory: data
+        })}
 
    
 
     render() {
        
         let mappedInv = this.props.inventory.map((inventory,index) => {
-            return <Product key = {index} inventory = {inventory} deleteProduct = {this.deleteProduct} />
+            return <Product key = {index} inventory = {inventory} deleteProduct = {this.deleteProduct} updateProd = {this.updateProd} />
         })
 
         return (

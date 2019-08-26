@@ -66,11 +66,20 @@ export default class Product extends Component {
                 {!this.state.edit
                 ?
             (<div className='red-box'>
+
+                
                 <img src={img} alt='products' className='image-sizer' />
+
+                <div className='words'>
                 <p>{name}</p>
                 <p>${price}</p>
-                <button onClick={this.handleDelete}>Delete</button>
-                <button onClick={this.handleToggle} >Edit</button>
+                
+
+                <div className='butts'>
+                <button className="del" onClick={this.handleDelete}>Delete</button>
+                <button className='ed' onClick={this.handleToggle} >Edit</button>
+                </div>
+                </div>
             </div>)
             :
             (<div>

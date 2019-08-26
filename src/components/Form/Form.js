@@ -73,8 +73,10 @@ export default class Form extends Component {
                 <label>Price:</label>
                 <input className='input1' type="number" onChange={(e) => this.handleEdit2(e.target.value)} value={this.state.price}  />
 
-                <button id='cursor' onClick={() => this.handleEdit3()}>Cancel</button>
-                <button id='cursor' onClick={this.addProduct}>Add to Inventory</button>
+            <div className='butt'>
+                <button className='can' id='cursor' onClick={() => this.handleEdit3()}>Cancel</button>
+                <button className='add' id='cursor' onClick={this.addProduct}>Add to Inventory</button>
+                </div>
             </div>
         )
     }
